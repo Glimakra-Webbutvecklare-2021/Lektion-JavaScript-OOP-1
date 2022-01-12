@@ -7,7 +7,19 @@
     <title>Intro - objektorienterad programmering</title>
 </head>
 <body>
-    
+
+    <h1>Mina böcker</h1>
+    <form action="#">
+        <input type="text" placeholder="Ange titel" id="title" required>
+        <input type="text" placeholder="Ange författare" id="author" required>
+        <input type="text" placeholder="Ange antal sidor" id="pages" required>
+        <input type="text" placeholder="Url till boken" id="url" required>
+        <button id="add">Lägg till ny bok</button>
+    </form>
+
+    <!-- ett omslutande element för böcker -->
+    <div id="myBooks"></div>
+
 
     <script src="oop-classes.js"></script>
 </body>
