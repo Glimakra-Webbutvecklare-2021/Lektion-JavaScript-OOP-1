@@ -12,6 +12,16 @@ class Car {
         console.log(`En ${this.color} bil, med bilmärket ${this.type}. Bilens batterivärde är: ${this.batteryCapacity}`);
     }
 
+    // skriv ut log filen med console.log();
+    printLog() {
+
+        // loopa alla log poster
+        this.logFile.forEach(history => {
+            console.log(history);
+        });
+    }
+
+
     // en funktion som ändrar en egenskap
     setColor(color) {
 
@@ -48,7 +58,7 @@ class Car {
         let number = Math.random() * 10;
 
         // avrunda talet till ett heltal
-        number = Math.floor(number);
+        // number = Math.floor(number);
 
         // minska batteriet med motsvarande siffra
         this.batteryCapacity -= number;
@@ -90,4 +100,17 @@ car1.accelerate();
 car1.accelerate();
 car1.accelerate();
 car1.accelerate();
+// car1.describe();
+car1.turnLeft();
+car1.turnRight();
+car1.accelerate();
+car1.setColor("grön");
+car1.accelerate();
+car1.accelerate();
+car1.accelerate();
+car1.setColor("röd");
+car1.turnRight();
+
+
+car1.printLog();
 car1.describe();
