@@ -23,7 +23,8 @@ class Car {
 
     //  en funktion som hämtar en egenskap
     getColor() {
-        
+
+        return this.color;
     }
 }
 
@@ -34,3 +35,8 @@ car1.describe();
 car1.setColor("blå");
 car1.describe();
 
+// vilken färg har bilen nu...?
+let color = car1.getColor();
+
+// visa bilens färg
+console.log("Bilens färg är nu " + color);
