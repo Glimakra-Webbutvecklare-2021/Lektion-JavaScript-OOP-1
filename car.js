@@ -37,6 +37,9 @@ class Car {
 
         // att starta innebär att batteriet förbrukas ngt...
         this.batteryCapacity -= 1;
+
+        let history = "Bilen startade";
+        this.logFile.push(history);
     }
 
     accelerate() {
@@ -49,11 +52,23 @@ class Car {
 
         // minska batteriet med motsvarande siffra
         this.batteryCapacity -= number;
+
+        let history = "Bilen accelerade, vilket påverkade batteriet negativt: " + number;
+        this.logFile.push(history);
     }
 
     turnLeft() {
 
+        let history = "Bilen svängde vänster";
+        this.logFile.push(history);
     }
+
+    turnRight() {
+
+        let history = "Bilen svängde höger";
+        this.logFile.push(history);
+    }
+
 }
 
 // skapa en bil
