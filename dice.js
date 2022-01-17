@@ -4,10 +4,9 @@
 // elementet som visar täningen
 const dice = document.getElementById("dice");
 
-function rollDice() {
+function rollDice(numberOfMilliSeconds) {
 
     return new Promise((resolve, reject) => {
-
 
         let diceNumber = 0;
 
@@ -25,11 +24,17 @@ function rollDice() {
             clearInterval(intervalId);
 
             resolve(diceNumber);
-        }, 2000);
+        }, numberOfMilliSeconds);
 
     });
 }
 
-rollDice().then((message) => {
+// kasta tärningen i ett slumpat antal millisekunder
+
+let ms = Math.floor(Math.random() * 1000);
+
+console.log(`Tärningen rullar i ${ms} millisekunder`);
+
+rollDice(ms).then((message) => {
     console.log("Resultatet blev: " + message);
 });
