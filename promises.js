@@ -9,6 +9,7 @@ function iPromiseYou() {
     return new Promise(function(resolve, reject) {
 
         // slumpen får avgöra
+        // men, det hade kunnat handla om: läsa en fil, hämta en fil, kontrollera ngt som tar tid...
         let randomNumber = Math.random();
 
         // om talet är över 0.5 - lyckat resultat 
@@ -32,10 +33,11 @@ iPromiseYou().then((message) => {
 });
 */
 
-// hantera ett felmeddelade med catch()
+// hantera ett felmeddelade med catch() - då undviker man fel som kan hindra en sida från fortsatt funktionalitet
 iPromiseYou().then((message) => {
     console.log("Ett lyckat resultat: " + message);
 }).catch((message) => {
     console.log("Ett inte så lyckat resultat: " + message);
+    document.body.innerText = "Tyvärr gick det inte, försök om en stund!";
 });
 
