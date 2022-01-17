@@ -62,5 +62,28 @@ setInterval(() => {
 }, 1000);
 
 // funktionerna setInterval() och setTimeout() genererar ett unikt id
-// detta unika id används om man vill avbryta funktionen 
+// detta unika id används om man vill avbryta funktionen i sig 
+
+// räkna ner från 3 till 0...
+let countdownToZero = 3;
+
+// element som ska visa nedräkningen
+const countdown = document.getElementById("countdown");
+
+let intervalId = setInterval(function() {
+
+    if (countdownToZero <= 0) {
+
+        // avbryt nedräkningen med metoden clearInterval() och ange vilket unikt id som gäller
+        clearInterval(intervalId);
+
+        // ändra title elementets värde...
+        document.querySelector("title").innerText = "Nu är det lunch";
+    }
+    console.log(countdownToZero);
+    countdown.innerText = countdownToZero; 
+
+    countdownToZero--;
+
+}, 1000);
 
