@@ -57,9 +57,10 @@ setInterval(() => {
     // aktuell sekund
     console.log(date.getSeconds());
 
-    time.innerText = date.getSeconds();
+    time.innerText = date.toLocaleTimeString();
 
 }, 1000);
+
 
 // funktionerna setInterval() och setTimeout() genererar ett unikt id
 // detta unika id används om man vill avbryta funktionen i sig 
@@ -76,7 +77,7 @@ let intervalId = setInterval(function() {
 
         // avbryt nedräkningen med metoden clearInterval() och ange vilket unikt id som gäller
         clearInterval(intervalId);
-
+        
         // ändra title elementets värde...
         document.querySelector("title").innerText = "Nu är det lunch";
     }
