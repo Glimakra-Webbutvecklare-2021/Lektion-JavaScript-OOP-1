@@ -12,6 +12,31 @@ class Book {
     describe() {
         console.log(`"${this.title}", en bok på ${this.pages} sidor av författaren ${this.author}`);
     }
+
+    addToPage() {
+
+        // skapa dynamiskt html element som kan placeras på webbsidan
+        // skapa ett omslutande figure element till en ny bok
+        let figure = document.createElement("figure");
+
+        // skapa ett img element - med JavaScript inbyggda objekt Image()
+        let img = new Image();
+
+        // lägg till src attributet
+        img.src = url.value;
+
+        // lägg till ett element för bildtext - figcaption
+        let figcaption = document.createElement("figcaption");
+        figcaption.textContent = `"${title.value}", av ${author.value}`;
+
+        // se till att dynamiska element har rätt struktur
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+
+        // lägg till figure elementet med dess innehåll till webbsidans element med id myBooks
+        myBooks.appendChild(figure);
+
+    }
 }
 
 // instansiera nya objekt från klassen - alltså: skapa nya böcker
@@ -28,7 +53,7 @@ const add = document.getElementById("add");
 const myBooks = document.getElementById("myBooks");
 
 // händelselyssnare för knappen
-add.addEventListener("click", function(event) {
+add.addEventListener("click", function (event) {
 
     event.preventDefault();
 
@@ -40,26 +65,9 @@ add.addEventListener("click", function(event) {
 
     console.log(title.value, author.value, pages.value, url.value);
 
-    // skapa dynamiskt html element som kan placeras på webbsidan
-    // skapa ett omslutande figure element till en ny bok
-    let figure = document.createElement("figure");
+    let book = new Book(title.value, author.value, pages.value, url.value);
 
-    // skapa ett img element - med JavaScript inbyggda objekt Image()
-    let img = new Image();
-
-    // lägg till src attributet
-    img.src = url.value;
-
-    // lägg till ett element för bildtext - figcaption
-    let figcaption = document.createElement("figcaption");
-    figcaption.textContent = `"${title.value}", av ${author.value}`;
-
-    // se till att dynamiska element har rätt struktur
-    figure.appendChild(img);
-    figure.appendChild(figcaption);
-
-    // lägg till figure elementet med dess innehåll till webbsidans element med id myBooks
-    myBooks.appendChild(figure);
+    book.addToPage();
 
     // nollställ formulärfält
     title.value = "";
