@@ -38,3 +38,8 @@ console.log(`Tärningen rullar i ${ms} millisekunder`);
 rollDice(ms).then((message) => {
     console.log("Resultatet blev: " + message);
 });
+
+
+Promise.resolve("Lektionen är till ända....").then((message) => {
+    console.log(message);
+});
