@@ -11,8 +11,10 @@ Lektion - introduktion i objektorienterad programmering med Javascript
 - setTimeout()
 - clearTimeout()
 
-Dice laboration
 ***
-![Sprite image of a dice](dice-sprite.png)
+
+Dice laboration
+
+![A dice sprite image](dice-sprite.png)
 
 *600 x 100px*
