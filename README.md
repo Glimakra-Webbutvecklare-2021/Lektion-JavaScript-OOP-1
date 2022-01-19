@@ -14,3 +14,5 @@ Lektion - introduktion i objektorienterad programmering med Javascript
 Dice laboration
 ***
 ![Sprite image of a dice](dice-sprite.png)
+
+*600 x 100px*
