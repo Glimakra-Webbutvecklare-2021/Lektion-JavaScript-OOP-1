@@ -10,3 +10,6 @@ Lektion - introduktion i objektorienterad programmering med Javascript
 - clearInterval()
 - setTimeout()
 - clearTimeout()
+
+Dice laboration
+![Sprite image of a dice](dice-sprite.png)
