@@ -28,6 +28,9 @@ function rollDice(numberOfMilliSeconds) {
             // visa en bild av värdet (bakgrundsbild med egenskapen background-position-x);
             diceImage.style.backgroundPositionX = -diceNumber * 100 + 100 + "px";
 
+            // rotera bilden med CSS, eller kanske skeva bilden? se bland annt egenskapen transform
+            diceImage.style.transform = "rotate("+ diceNumber * 30 +"deg)";
+
         }, 10);
 
         // avbryt tärningskastet efter ett antal millisekunder
@@ -45,7 +48,6 @@ function rollDice(numberOfMilliSeconds) {
 }
 
 // kasta tärningen i ett slumpat antal millisekunder
-
 let ms = Math.floor(Math.random() * 1000);
 console.log(`Tärningen rullar i ${ms} millisekunder`);
 
@@ -56,4 +58,17 @@ rollDice(ms).then((message) => {
 // Ett promise objekt om ett löfte kan infrias direkt:
 Promise.resolve("Lektionen är till ända....").then((message) => {
     console.log(message);
+});
+
+// en händelselyssnare för klick på tärningen
+diceImage.addEventListener("click", function() {
+
+    // kasta tärningen i ett slumpat antal millisekunder
+    let ms = Math.floor(Math.random() * 1000);
+    console.log(`Tärningen rullar i ${ms} millisekunder`);
+
+    rollDice(ms).then((message) => {
+        console.log("Resultatet blev: " + message);
+    });
+
 });
