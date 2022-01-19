@@ -12,4 +12,5 @@ Lektion - introduktion i objektorienterad programmering med Javascript
 - clearTimeout()
 
 Dice laboration
+***
 ![Sprite image of a dice](dice-sprite.png)
