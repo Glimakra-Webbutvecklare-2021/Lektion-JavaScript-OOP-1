@@ -4,6 +4,9 @@
 // elementet som visar täningen
 const dice = document.getElementById("dice");
 
+// elementet som visar en bil av tärningen
+const diceImage = document.getElementById("dice-image");
+
 // Promise baserad funktion för att kasta tärning
 function rollDice(numberOfMilliSeconds) {
 
@@ -21,6 +24,9 @@ function rollDice(numberOfMilliSeconds) {
 
             // visa värdet i elementet 
             dice.innerText = diceNumber;
+
+            // visa en bild av värdet (bakgrundsbild med egenskapen background-position-x);
+            diceImage.style.backgroundPositionX = -diceNumber * 100 + 100 + "px";
 
         }, 10);
 
