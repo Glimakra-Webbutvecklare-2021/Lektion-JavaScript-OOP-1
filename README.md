@@ -18,3 +18,10 @@ Dice laboration
 ![A dice sprite image](dice-sprite.png)
 
 *600 x 100px*
+
+***
+
+Exempel på asynkron kod med
+
+- XMLHttpRequest()
+- Fetch()
