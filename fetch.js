@@ -2,7 +2,7 @@
 // fetch är promise baserat: hanteras med .then() syntax
 
 let url = "movies.json";
-url = "https://cat-fact.herokuapp.com/fact";
+url = "https://cat-fact.herokuapp.com/facts";
 url = "https://api.github.com/users/{username}";
 
 fetch(url)
