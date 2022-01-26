@@ -36,7 +36,7 @@ fetch(url).then(function (response) {
     // console.log(obj);
 
     // presentera data på webbsidan
-    result.innerHTML = render(data.company);
+    result.innerHTML = render(data.sweden);
 
 }).catch(function (error) {
 
@@ -84,16 +84,17 @@ fetch(url)
 function renderContent(obj) {
 
     // skapa element med document.createElement()
-    let p = document.createElement("p");
+    let img = document.createElement("img");
     
-    // lägg till textinnehåll 
-    p.textContent = obj.name;
+    // lägg till bildkälla 
+    img.src = obj.sweden;
 
     // visa på sidan
-    result.appendChild(p);
+    result.appendChild(img);
 }
 
 function renderContentFromInnerHTML(obj) {
 
-    return `<img src="${obj.sweden}">`;
+    // innerHTML... 
+    return `<img src="${obj.sweden}" onclick="alert('innerHTML och JavaScript...')">`;
 }
