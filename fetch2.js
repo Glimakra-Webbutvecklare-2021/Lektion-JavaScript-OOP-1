@@ -2,7 +2,7 @@
 let url = "https://api.github.com/";
 
 // endpoint för users
-url = "https://api.github.com/users/andsju";
+url = "https://api.github.com/emojis";
 
 // Fetch() i JavaScript är promisebaserat - returnerar resultat efter tid
 // hanteras därför med .then() .catch() .finally()
@@ -95,5 +95,5 @@ function renderContent(obj) {
 
 function renderContentFromInnerHTML(obj) {
 
-    return `<p>${obj.name}</p>`;
+    return `<img src="${obj.sweden}">`;
 }
