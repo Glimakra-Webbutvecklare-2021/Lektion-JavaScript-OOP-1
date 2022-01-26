@@ -1,7 +1,7 @@
 // hämta information från Github API
 let url = "https://api.github.com/";
 
-// endpoint för users
+// endpoint för emojis
 url = "https://api.github.com/emojis";
 
 // Fetch() i JavaScript är promisebaserat - returnerar resultat efter tid
